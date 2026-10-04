@@ -195,7 +195,7 @@ def package_to_markdown(package):
 {package.get('story_summary')}
 
 ## Narration
-{package.get(‘narration’)}
+{package.get('narration')}
 ## Shot Plan
 """
     for s in package.get("shot_plan", []):
