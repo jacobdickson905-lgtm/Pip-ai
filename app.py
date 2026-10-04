@@ -44,9 +44,9 @@ CHARACTER_BIBLE = """Pip is a tiny adorable teal-blue fox with:
 - Bright yellow scarf (always present, never changes)
 - Soft rounded / plush-like proportions
 - Curious, kind, expressive personality
-- Completely original design – must NEVER resemble any existing copyrighted cartoon character"""
+- Completely original design - must NEVER resemble any existing copyrighted cartoon character"""
 
-STYLE_LOCK = """High-quality polished 3D children's animation, warm cinematic lighting, soft rounded shapes, colorful natural environments, expressive faces, detailed but appealing, 9:16 vertical, action centered for mobile viewing, ages 4–9."""
+STYLE_LOCK = """High-quality polished 3D children's animation, warm cinematic lighting, soft rounded shapes, colorful natural environments, expressive faces, detailed but appealing, 9:16 vertical, action centered for mobile viewing, ages 4-9."""
 
 SYSTEM_PROMPT = f"""You are the expert creative director for an original children's YouTube Shorts series starring Pip the teal-blue fox.
 
@@ -57,16 +57,16 @@ VISUAL STYLE:
 {STYLE_LOCK}
 
 STRICT STORY RULES:
-- 25–35 seconds spoken length
+- 25-35 seconds spoken length
 - Structure (non-negotiable for retention):
-  0–2s: Immediate visual hook (something already happening)
-  2–7s: Pip reacts and chases/investigates
-  7–14s: Escalation + gentle funny obstacle/near-miss
-  14–22s: Pip succeeds + notices someone/something needing kindness
-  22–28s: Pip chooses to share or help
-  28–34s: Happy payoff + small visual gag (leaf, butterfly, confused look, etc.)
+  0-2s: Immediate visual hook (something already happening)
+  2-7s: Pip reacts and chases/investigates
+  7-14s: Escalation + gentle funny obstacle/near-miss
+  14-22s: Pip succeeds + notices someone/something needing kindness
+  22-28s: Pip chooses to share or help
+  28-34s: Happy payoff + small visual gag (leaf, butterfly, confused look, etc.)
 - Family-friendly, understandable without sound
-- Completely original – zero copying of existing characters or stories
+- Completely original - zero copying of existing characters or stories
 - Warm, curious, kind, gently funny tone
 
 OUTPUT ONLY valid JSON with these exact keys:
@@ -195,7 +195,6 @@ def package_to_markdown(package):
 {package.get('story_summary')}
 
 ## Narration
-{package.get('narration')}
 ## Shot Plan
 """
     for s in package.get("shot_plan", []):
@@ -206,8 +205,7 @@ def package_to_markdown(package):
 {chr(10).join(package.get('captions', []))}
 
 ## YouTube Description
-{package.get(‘youtube_description’)}
-  ## Hashtags
+## Hashtags
 {package.get('hashtags')}
 
 ## Thumbnail Concept
@@ -217,8 +215,7 @@ def package_to_markdown(package):
 {package.get('why_it_works', '')}
 
 ## Base Prompt Lock
-{package.get(‘prompt_base’, ‘’)}
-  """
+"""
     return md
 
 data = load_data()
@@ -416,7 +413,7 @@ with tab4:
     ### Open on iPhone
     1. After the app is running, open the link in **Safari**
     2. Tap Share → **Add to Home Screen**
-    3. Name it “Pip AI”
+    3. Name it "Pip AI"
     
     ### Free AI keys
     - Groq: console.groq.com → model `llama-3.3-70b-versatile`
