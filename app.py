@@ -321,9 +321,11 @@ with tab1:
                 st.code(package["narration"], language=None)
                 
                 with st.expander("Full Shot Plan"):
-                    for s in package["shot_plan"]:
-                        st.markdown(f"**Shot {s['shot']}** ({s.get('duration')}) – {s['description']}  
-Camera: {s.get('camera')} | Expression: {s.get('expression')}")
+    for s in package["shot_plan"]:
+        st.markdown(
+            f"**Shot {s['shot']}** ({s.get('duration')}) – {s['description']}  \n"
+            f"Camera: {s.get('camera')} | Expression: {s.get('expression')}"
+        )
                 
                 st.markdown("**Captions**")
                 st.code("\n".join(package["captions"]), language=None)
